@@ -1,0 +1,15 @@
+body { font-family: sans-serif; margin: 20px; }
+h1, h2 { color: #333; }
+#filter-section label, #preferences-section label { margin-right: 5px; }
+#filter-section input, #filter-section button, #preferences-section input, #preferences-section button { margin-right: 10px; margin-bottom: 10px; }
+#flights-list div { border: 1px solid #ccc; margin-bottom: 10px; padding: 10px; }
+#seat-map { margin-top: 20px; border: 1px solid #666; padding: 10px; display: grid; grid-template-columns: repeat(6, 30px); /* Eeldusel 6 kohta reas */ gap: 5px; justify-content: center; width: fit-content;}
+.seat { border: 1px solid #aaa; width: 30px; height: 30px; display: flex; align-items: center; justify-content: center; font-size: 10px; cursor: pointer; background-color: #e0e0e0; }
+.seat.occupied { background-color: #ff7f7f; cursor: not-allowed; }
+.seat.available { background-color: #90ee90; }
+.seat.window { font-weight: bold; }
+.seat.aisle { font-style: italic; }
+.seat.extra-legroom { border: 2px solid blue; }
+.seat.exit-row { border: 2px solid orange; }
+.seat.recommended { box-shadow: 0 0 5px 2px yellow; }
+.seat-aisle-gap { width: 20px; /* Vahekäigu visuaalne eraldaja */}

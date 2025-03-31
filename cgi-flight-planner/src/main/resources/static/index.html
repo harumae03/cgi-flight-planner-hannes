@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Lennuplaneerija</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<h1>Lennuplaneerija</h1>
+
+<div id="filter-section">
+    <h2>Otsi lende</h2>
+    <label for="destination">Sihtkoht:</label>
+    <input type="text" id="destination" name="destination">
+
+    <label for="date">Kuupäev:</label>
+    <input type="date" id="date" name="date">
+
+    <label for="maxPrice">Max hind:</label>
+    <input type="number" id="maxPrice" name="maxPrice" step="0.01">
+
+    <button id="search-button">Otsi</button>
+</div>
+
+<div id="flights-section">
+    <h2>Saadaval lennud</h2>
+    <div id="flights-list">
+        Laen lende...
+    </div>
+</div>
+
+<div id="seats-section" style="display: none;">
+    <h2>Vali istekohad lennule <span id="selected-flight-number"></span></h2>
+    <div id="preferences-section">
+        <label for="seat-count">Kohtade arv:</label>
+        <input type="number" id="seat-count" value="1" min="1">
+        <br>
+        <label>Eelistused:</label>
+        <input type="checkbox" id="pref-window" value="WINDOW"><label for="pref-window"> Aken</label>
+        <input type="checkbox" id="pref-aisle" value="AISLE"><label for="pref-aisle"> Vahekäik</label>
+        <input type="checkbox" id="pref-legroom" value="EXTRA_LEGROOM"><label for="pref-legroom"> Lisajalaruum</label>
+        <input type="checkbox" id="pref-exit" value="EXIT_ROW"><label for="pref-exit"> Väljapääsu rida</label>
+        <input type="checkbox" id="pref-together" value="TOGETHER"><label for="pref-together"> Kõrvuti</label>
+        <br>
+        <button id="recommend-button">Soovita istekohti</button>
+        <button id="back-to-flights-button">Tagasi lendude juurde</button>
+    </div>
+    <div id="seat-map">
+        <!-- Istmeplaan genereeritakse siia JavaScriptiga -->
+    </div>
+</div>
+
+<script src="js/script.js"></script>
+</body>
+</html>
