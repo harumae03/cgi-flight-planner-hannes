@@ -28,11 +28,11 @@ public class Seat {
     private SeatType seatRow;
 
     @Column(nullable = false)
-    private char SeatColumn;
+    private char seatColumn;
 
     @Enumerated(EnumType.STRING)
     @Column(nullable = false)
-    private SeatType seatType;
+    private SeatType type;
 
     @Enumerated(EnumType.STRING)
     @Column(nullable = false)
