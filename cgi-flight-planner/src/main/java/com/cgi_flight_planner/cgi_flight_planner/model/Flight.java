@@ -20,7 +20,7 @@ public class Flight {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(nullable = false, unique = true)//sest lennunumber on väga tähtis
+    @Column(name = "flight_number", nullable = false, unique = true)//sest lennunumber on väga tähtis
     private String flightNo;
 
     @Column(nullable = false)
