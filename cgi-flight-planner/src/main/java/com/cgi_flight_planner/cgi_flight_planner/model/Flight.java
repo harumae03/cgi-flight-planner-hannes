@@ -6,15 +6,14 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.math.BigDecimal;
-import java.time.Duration;
 import java.time.LocalTime;
 
 @Entity
-@Table(name = "lennud")
+@Table(name = "flights")
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class Lend {
+public class Flight {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
