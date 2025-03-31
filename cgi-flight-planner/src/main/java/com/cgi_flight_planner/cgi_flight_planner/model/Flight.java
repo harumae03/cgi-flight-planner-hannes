@@ -4,8 +4,10 @@ import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.springframework.boot.SpringApplication;
 
 import java.math.BigDecimal;
+import java.time.Duration;
 import java.time.LocalTime;
 
 @Entity
@@ -37,5 +39,9 @@ public class Flight {
     private BigDecimal price;
 
     private String airline;
+
+    public Duration getDuration() {
+        return Duration.between(departureTime, arrivalTime);
+    }
 
 }
